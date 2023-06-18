@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Lab4
@@ -28,7 +24,6 @@ namespace Lab4
             TextFile deserialized = (TextFile)bf.Deserialize(fs);
             Path = deserialized.Path;
             Content = deserialized.Content;
-            //можно дописать еще свойства
             fs.Close();
         }
         public void XmlSerializer(XmlSerializer serializer)
